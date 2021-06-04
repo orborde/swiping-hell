@@ -6,3 +6,7 @@ Heterosexual men get an extremely low match rate on these apps, which is seems t
 But that raises a question: is this *optimal* behavior, or is it a counterproductive reaction to the frustration of getting almost no matches?
 
 This model attempts to answer that.
+
+# Understanding the model
+
+Look at the `find_a_date` function in [dates.py](dates.py) to understand the "core" of the model, and hopefully that will equip you to understand the details by reading the rest of the code.
