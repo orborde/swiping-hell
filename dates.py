@@ -74,21 +74,31 @@ def find_a_date(population: List[Person], swipe_classifier) -> Tuple[int, int, i
     people_swiped  = 0
     people_chatted = 0
     cost = 0
+
+    # Work through the population of possible dates, looking for a person who
+    # is both a "good date" AND who has 👍ed you back.
     for person in population:
         people_checked += 1
         cost += swipe_classifier.cost
+        # Decide whether to 👍 or 👎
         if swipe_classifier.classify(person) == DateGoodness.BAD:
             continue
+
+        # We 👍ed them!
         people_swiped += 1
 
+        # Did the other party 👍 us?
         if person.accept == Accept.NO:
             continue
 
+        # We matched! Engage in comparatively costly chat to see for sure whether
+        # they're a good date.
         people_chatted += 1
         cost += ChatClassifier.cost
         if ChatClassifier.classify(person) == DateGoodness.BAD:
             continue
 
+        # We found a good date! Report how much work it took to do so.
         return people_checked, people_swiped, people_chatted, cost
 
 def simulate(swipe_classifier, count=1000):
