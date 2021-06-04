@@ -10,3 +10,27 @@ This model attempts to answer that.
 # Understanding the model
 
 Look at the `find_a_date` function in [dates.py](dates.py) to understand the "core" of the model, and hopefully that will equip you to understand the details by reading the rest of the code.
+
+# Select results
+
+```
+$ python3 dates.py
+simulating SwipeEveryoneClassifier x 1000
+100%|█████████████████████████████████████████████████████████████| 1000/1000 [00:00<00:00, 1056.10it/s]
+mean people checked: 498.107
+mean people swiped:  498.107
+mean people chatted: 5.465
+mean cost incurred:  546.5
+simulating FastSwipeClassifier x 1000
+100%|██████████████████████████████████████████████████████████████| 1000/1000 [00:01<00:00, 972.37it/s]
+mean people checked: 499.858
+mean people swiped:  275.358
+mean people chatted: 3.256
+mean cost incurred:  825.458
+simulating SlowSwipeClassiifer x 1000
+100%|██████████████████████████████████████████████████████████████| 1000/1000 [00:01<00:00, 994.94it/s]
+mean people checked: 514.032
+mean people swiped:  98.18
+mean people chatted: 1.447
+mean cost incurred:  5285.02
+```
