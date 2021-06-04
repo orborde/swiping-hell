@@ -13,6 +13,7 @@ Look at the `find_a_date` function in [dates.py](dates.py) to understand the "co
 
 # Select results
 
+## Default parameters
 ```
 $ python3 dates.py
 simulating SwipeEveryoneClassifier x 1000
@@ -33,4 +34,39 @@ mean people checked: 514.032
 mean people swiped:  98.18
 mean people chatted: 1.447
 mean cost incurred:  5285.02
+```
+
+## Make people who 👍 you back extremely common
+
+As you might expect, 👍ing everyone isn't so great when most of them 👍 you back - you'll waste a lot of time talking to matches and finding that they aren't a great fit.
+
+```python
+POPULATION_COUNTS = {
+    GOOD_YES : 1000,
+    BAD_YES  : 9000,
+    GOOD_NO  : 99,
+    BAD_NO   : 891,
+}
+```
+
+```
+$ python3 dates.py
+simulating SwipeEveryoneClassifier x 1000
+100%|██████████████████████████████████████████████████████████████| 1000/1000 [00:07<00:00, 142.50it/s]
+mean people checked: 11.016
+mean people swiped:  11.016
+mean people chatted: 10.055
+mean cost incurred:  1005.5
+simulating FastSwipeClassifier x 1000
+100%|██████████████████████████████████████████████████████████████| 1000/1000 [00:07<00:00, 138.30it/s]
+mean people checked: 10.529
+mean people swiped:  5.784
+mean people chatted: 5.254
+mean cost incurred:  535.929
+simulating SlowSwipeClassiifer x 1000
+100%|██████████████████████████████████████████████████████████████| 1000/1000 [00:07<00:00, 129.23it/s]
+mean people checked: 10.497
+mean people swiped:  1.985
+mean people chatted: 1.828
+mean cost incurred:  287.77
 ```
