@@ -107,6 +107,8 @@ def find_a_date(population: List[Person], swipe_classifier) -> Tuple[int, int, i
         # We found a good date! Report how much work it took to do so.
         return people_checked, people_swiped, people_chatted, cost
 
+    raise Exception("didn't find a good date :-(")
+
 def simulate(swipe_classifier, count=1000):
     print('simulating', swipe_classifier.__name__, 'x', count)
     results = []
