@@ -37,6 +37,14 @@ assert sum(POPULATION_COUNTS.values()) == 1000
 POPULATION = list(itertools.chain(*([typ]*ct for typ,ct in POPULATION_COUNTS.items())))
 
 Cost = int
+
+class SwipeEveryoneClassifier:
+    cost: Cost = 0
+
+    def classify(person: Person) -> DateGoodness:
+        return DateGoodness.GOOD
+
+
 class FastSwipeClassifier:
     cost: Cost = 1
 
@@ -114,5 +122,6 @@ def simulate(swipe_classifier, count=1000):
     print('mean people chatted:', np.mean(people_chatted))
     print('mean cost incurred: ', np.mean(cost))
 
+simulate(SwipeEveryoneClassifier)
 simulate(FastSwipeClassifier)
 simulate(SlowSwipeClassiifer)
