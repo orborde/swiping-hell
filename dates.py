@@ -32,8 +32,6 @@ POPULATION_COUNTS = {
     BAD_NO   : 891,
 }
 
-assert sum(POPULATION_COUNTS.values()) == 1000
-
 POPULATION = list(itertools.chain(*([typ]*ct for typ,ct in POPULATION_COUNTS.items())))
 
 Cost = int
