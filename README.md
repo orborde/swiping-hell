@@ -11,7 +11,7 @@ This model attempts to answer that.
 
 Look at the `find_a_date` function in [dates.py](dates.py) to understand the "core" of the model, and hopefully that will equip you to understand the details by reading the rest of the code.
 
-# Select results
+# Selected results
 
 ## Default parameters
 ```
