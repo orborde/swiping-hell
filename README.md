@@ -14,6 +14,9 @@ Look at the `find_a_date` function in [dates.py](dates.py) to understand the "co
 # Selected results
 
 ## Default parameters
+
+Yep, men should be blindly swiping right, apparently.
+
 ```
 $ python3 dates.py
 simulating SwipeEveryoneClassifier x 1000
