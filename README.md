@@ -15,7 +15,7 @@ Look at the `find_a_date` function in [dates.py](dates.py) to understand the "co
 
 ## Default parameters
 
-Yep, men should be blindly swiping right, apparently.
+Yep, men gain by blindly swiping right, apparently.
 
 ```
 $ python3 dates.py
